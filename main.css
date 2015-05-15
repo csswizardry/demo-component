@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    #NAV-PRIMARY
+\*------------------------------------*/
+/**
+ * An entirely encapsulated nav component to be dropped into any Sass project.
+ */
+/**
+ * Nav Block: this is the root node of our primary nav component.
+ *
+ * 1. Use `display: table;` and `table-layout: fixed;` to give us equal-width
+ *    nav items.
+ * 2. Ensure that the nav takes up all available horizontal space.
+ */
+.c-nav-primary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 16px/1.5 sans-serif;
+  text-align: center;
+  display: table;
+  /* [1] */
+  table-layout: fixed;
+  /* [1] */
+  width: 100%;
+  /* [2] */
+}
+
+/**
+ * 1. Force items within the nav to pack up accordingly.
+ */
+.c-nav-primary__item {
+  display: table-cell;
+  /* [1] */
+}
+
+/**
+ * 1. Give links a decent hit area.
+ */
+.c-nav-primary__link {
+  display: block;
+  /* [1] */
+  background-color: #c00;
+  color: #fff;
+  padding: 12px;
+  text-decoration: none;
+}
+.c-nav-primary__link:hover, .c-nav-primary__link:focus {
+  background-color: #BADA55;
+  color: #fff;
+  text-decoration: none;
+}
+.c-nav-primary__link.is-current {
+  background-color: #BADA55;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=main.css.map */

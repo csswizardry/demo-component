@@ -1,0 +1,97 @@
+/*------------------------------------*\
+    #NAV-PRIMARY
+\*------------------------------------*/
+
+/**
+ * An entirely encapsulated nav component to be dropped into any Sass project.
+ */
+
+// Predefine the below settings in your manifest file.
+$nav-primary-font-size:                 12px !default;
+$nav-primary-line-height:               1.5 !default;
+$nav-primary-font-family:               sans-serif !default;
+
+$nav-primary-color:                     #fff !default;
+$nav-primary-color-hover:               #fff !default;
+$nav-primary-color-current:             #fff !default;
+
+$nav-primary-color-background:          #09f !default;
+$nav-primary-color-background-hover:    #BADA55 !default;
+$nav-primary-color-background-current:  #BADA55 !default;
+
+$nav-primary-underline:                 false !default;
+$nav-primary-underline-hover:           false !default;
+$nav-primary-underline-current:         true !default;
+
+$nav-primary-padding:                   10px !default;
+
+
+
+
+
+/**
+ * Nav Block: this is the root node of our primary nav component.
+ *
+ * 1. Use `display: table;` and `table-layout: fixed;` to give us equal-width
+ *    nav items.
+ * 2. Ensure that the nav takes up all available horizontal space.
+ */
+.c-nav-primary {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    font: #{$nav-primary-font-size}/#{$nav-primary-line-height} $nav-primary-font-family;
+    text-align: center;
+    display: table; /* [1] */
+    table-layout: fixed; /* [1] */
+    width: 100%; /* [2] */
+}
+
+    /**
+     * 1. Force items within the nav to pack up accordingly.
+     */
+    .c-nav-primary__item {
+        display: table-cell; /* [1] */
+    }
+
+        /**
+         * 1. Give links a decent hit area.
+         */
+        .c-nav-primary__link {
+            display: block; /* [1] */
+            background-color: $nav-primary-color-background;
+            color: $nav-primary-color;
+            padding: $nav-primary-padding;
+
+            @if ($nav-primary-underline == true) {
+                text-decoration: underline;
+            } @else {
+                text-decoration: none;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $nav-primary-color-background-hover;
+                color: $nav-primary-color-hover;
+
+                @if ($nav-primary-underline-hover == true) {
+                    text-decoration: underline;
+                } @else {
+                    text-decoration: none;
+                }
+
+            }
+
+            &.is-current {
+                background-color: $nav-primary-color-background-hover;
+                color: $nav-primary-color-hover;
+
+                @if ($nav-primary-underline-current == true) {
+                    text-decoration: underline;
+                } @else {
+                    text-decoration: none;
+                }
+
+            }
+
+        }
