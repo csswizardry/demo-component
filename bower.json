@@ -1,0 +1,11 @@
+{
+  "name": "csswizardry-demo-component",
+  "version": "0.1.0",
+  "homepage": "https://github.com/csswizardry/demo-component",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "A simple demo component to show how we might include encapsulated bits of UI within another project.",
+  "main": "_components.nav-primary.scss",
+  "license": "Apache2"
+}
