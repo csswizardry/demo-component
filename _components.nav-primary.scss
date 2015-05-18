@@ -7,6 +7,8 @@
  */
 
 // Predefine the below settings in your manifest file.
+$nav-primary-namespace:                 null !default;
+
 $nav-primary-font-size:                 12px !default;
 $nav-primary-line-height:               1.5 !default;
 $nav-primary-font-family:               sans-serif !default;
@@ -36,7 +38,7 @@ $nav-primary-padding:                   10px !default;
  *    nav items.
  * 2. Ensure that the nav takes up all available horizontal space.
  */
-.c-nav-primary {
+.#{$nav-primary-namespace}c-nav-primary {
     margin:  0;
     padding: 0;
     list-style: none;
@@ -50,14 +52,14 @@ $nav-primary-padding:                   10px !default;
     /**
      * 1. Force items within the nav to pack up accordingly.
      */
-    .c-nav-primary__item {
+    .#{$nav-primary-namespace}c-nav-primary__item {
         display: table-cell; /* [1] */
     }
 
         /**
          * 1. Give links a decent hit area.
          */
-        .c-nav-primary__link {
+        .#{$nav-primary-namespace}c-nav-primary__link {
             display: block; /* [1] */
             background-color: $nav-primary-color-background;
             color: $nav-primary-color;
