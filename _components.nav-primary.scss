@@ -15,15 +15,15 @@ $nav-primary-font-family:               sans-serif !default;
 
 $nav-primary-color:                     #fff !default;
 $nav-primary-color-hover:               #fff !default;
-$nav-primary-color-current:             #fff !default;
+$nav-primary-color-current:             $nav-primary-color-hover !default;
 
 $nav-primary-color-background:          #09f !default;
 $nav-primary-color-background-hover:    #BADA55 !default;
-$nav-primary-color-background-current:  #BADA55 !default;
+$nav-primary-color-background-current:  $nav-primary-color-background-hover !default;
 
 $nav-primary-underline:                 false !default;
 $nav-primary-underline-hover:           false !default;
-$nav-primary-underline-current:         true !default;
+$nav-primary-underline-current:         $nav-primary-underline-hover !default;
 
 $nav-primary-padding:                   10px !default;
 
@@ -85,8 +85,8 @@ $nav-primary-padding:                   10px !default;
             }
 
             &.is-current {
-                background-color: $nav-primary-color-background-hover;
-                color: $nav-primary-color-hover;
+                background-color: $nav-primary-color-background-current;
+                color: $nav-primary-color-current;
 
                 @if ($nav-primary-underline-current == true) {
                     text-decoration: underline;
